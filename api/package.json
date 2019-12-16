@@ -5,7 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch --verbose true",
+    "test:coverage": "NODE_ENV=test jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": "github:jacobschultz/scout",
   "author": "",
@@ -38,5 +43,9 @@
     "promise-parallel-throttle": "^3.2.0",
     "winston": "^3.1.0",
     "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "sinon": "^7.5.0"
   }
 }
